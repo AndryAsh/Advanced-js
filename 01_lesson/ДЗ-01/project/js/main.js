@@ -5,10 +5,10 @@ const products = [
   { id: 4, title: 'Gamepad', price: 150, img: '' },
 ];
 
-const renderProduct = (title, price, img = '') => {
-  if (img === '') {
+const renderProduct = (title, price, img = './img/no_image-1200x630.png') => {
+  /* if (img === '') {
     img = './img/no_image-1200x630.png';
-  }
+  } */
   return `<article class="product-item border-radius">
             <div class="product-img-wrap border-radius">
               <img src=${img} alt="Фотография товвара" class="product-img border-radius">
@@ -22,7 +22,8 @@ const renderProduct = (title, price, img = '') => {
 const renderCatalog = (list) => {
   const target = document.querySelector('.products');
   list.forEach(element => {
-    target.insertAdjacentHTML('beforeend', (renderProduct(element.title, element.price, element.img)));
+    /* target.insertAdjacentHTML('beforeend', (renderProduct(element.title, element.price, element.img))); */
+    target.insertAdjacentHTML('beforeend', ((element.img) ? (renderProduct(element.title, element.price, element.img)) : (renderProduct(element.title, element.price))));
   });
 };
 
