@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Интернет-магазин</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <button class="basket-btn" type="button">Корзина</button>
+        </header>
+        <main class="content">
+            <section class="product-options">
+                <article class="product-filling">
+                    <h3 class="form-header">Начинки:</h3>
+                    <div class="filling-list">
+                        <label class="filling">
+                            <input class="options-check" type="radio" name="filling" value="1" checked>
+                            <img src="img/cheese.jpg" alt="Фото начинки" class="filling-img">
+                            <span class="filling-name">СЫР</span>
+                        </label>
+
+                        <label class="filling">
+                            <input class="options-check" type="radio" name="filling" value="2">
+                            <img src="img/salat.jpg" alt="Фото начинки" class="filling-img">
+                            <span class="filling-name">САЛАТ</span>
+                        </label>
+
+                        <label class="filling">
+                            <input class="options-check" type="radio" name="filling" value="3">
+                            <img src="img/potato.jpg" alt="Фото начинки" class="filling-img">
+                            <span class="filling-name">КАРТОФЕЛЬ</span>
+                        </label>
+                    </div>
+                </article>
+                <article class="product-addition">
+                    <h3 class="form-header">Дополнительно:</h3>
+                    <div class="addition-list">
+                        <label class="addition">
+                            <input class="options-check" type="checkbox" name="addition" value="1">
+                            <img src="img/condiments.jpg" alt="Фото начинки" class="addition-img">
+                            <span class="addition-name">ПРИПРАВА</span>
+                        </label>
+
+                        <label class="addition">
+                            <input class="options-check" type="checkbox" name="addition" value="2">
+                            <img src="img/mayonese.jpg" alt="Фото начинки" class="addition-img">
+                            <span class="addition-name">МАЙОНЕЗ</span>
+                        </label>
+                    </div>
+                </article>
+            </section>
+
+            <section class="products content-container">
+                <article class="product-item border-radius">
+                    <h3 class="product-header">Большой бургер</h3>
+                    <div class="product-wrap border-radius">
+                        <div class="product-img-wrap border-circle">
+                            <img src="img/big-burger.jpg" alt="Фото товара" class="product-img border-circle">
+                            <button class="product-btn" type="button">В корзину</button>
+                        </div>
+                    </div>
+                    <span class="product-price">1200</span>
+                </article>
+
+                <article class="product-item border-radius">
+                    <h3 class="product-header">Маленький бургер</h3>
+                    <div class="product-wrap border-radius">
+                        <div class="product-img-wrap border-circle">
+                            <img src="img/little-burger.jpg" alt="Фото товара" class="product-img border-circle">
+                            <button class="product-btn" type="button">В корзину</button>
+                        </div>
+                    </div>
+                    <span class="product-price">1200</span>
+                </article>
+            </section>
+
+            <section class="basket">
+                <article class="basket-items">
+                    <h4 class="basket-header basket-grid">
+                        <span class="basket-delimiter basket-text">--- Наименование ---</span>
+                        <span class="basket-delimiter basket-text">Калории</span>
+                        <span class="basket-delimiter basket-text">Цена</span>
+                        <span class="basket-delimiter basket-text">Кол-во</span>
+                    </h4>
+                    <!-- <div class="item-basket basket-grid">
+                        <span class="basket-delimiter basket-text-italic">большой гамбургер</span>
+                        <span class="basket-delimiter basket-text-italic">40</span>
+                        <span class="basket-delimiter basket-text-italic">100</span>
+                        <span class="basket-delimiter basket-text-italic">1</span>
+                    </div>
+                    <div class="footer-item-basket basket-grid">
+                        <span class="basket-delimiter basket-text-italic">ИТОГ по позиции:</span>
+                        <span class="basket-delimiter basket-text-italic">80</span>
+                        <span class="basket-delimiter basket-text-italic">200</span>
+                        <span class="basket-delimiter basket-text-italic"></span>
+                    </div>
+                    <div class="item-basket basket-grid">
+                        <span class="basket-delimiter basket-text-italic">большой гамбургер</span>
+                        <span class="basket-delimiter basket-text-italic">40</span>
+                        <span class="basket-delimiter basket-text-italic">100</span>
+                        <span class="basket-delimiter basket-text-italic">1</span>
+                    </div>
+                    <div class="footer-item-basket basket-grid">
+                        <span class="basket-delimiter basket-text-italic">ИТОГ по позиции:</span>
+                        <span class="basket-delimiter basket-text-italic">80</span>
+                        <span class="basket-delimiter basket-text-italic">200</span>
+                        <span class="basket-delimiter basket-text-italic"></span>
+                    </div> -->
+                    <div class="basket-footer basket-grid">
+                        <span class="basket-delimiter basket-text">ОБЩИЙ ИТОГ:</span>
+                        <span class="basket-delimiter basket-text"></span>
+                        <span class="basket-delimiter basket-text"></span>
+                        <span class="basket-delimiter basket-text"></span>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="footer">
+            <!-- <p class="copyright"></p> -->
+        </footer>
+    </div>
+    <!-- <script src="./js/main.js"></script> -->
+</body>
+
+</html>
