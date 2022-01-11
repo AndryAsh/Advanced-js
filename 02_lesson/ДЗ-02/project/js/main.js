@@ -27,6 +27,17 @@ class ProductList {
     ];
   }
 
+  // Метод, определяющий суммарную стоимость всех товаров
+  _getTotalCost() {
+    let totalCost = 0;
+
+    this.#goods.forEach(element => {
+      totalCost += element.price;
+    });
+
+    return totalCost;
+  }
+
   // Метод создает экземппляры объектов товаров, используя свойства объектов массива #goods
   // и наполняет элемент HTML страницы, имеющий HTML класс, сохраненный в свойстве #container, товарами
   _render() {
