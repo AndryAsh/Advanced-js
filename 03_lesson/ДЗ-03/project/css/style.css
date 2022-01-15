@@ -1,0 +1,136 @@
+.container {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+}
+.content-container {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+.border-radius {
+    border-radius: 0.3em;
+}
+.basket-btn {
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
+.content {
+    margin: 3em 0 3em 0;
+}
+.products {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+.product-item {
+    position: relative;
+    background-color: #f0f0f0;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    padding: 1em;
+}
+.product-img-wrap {
+    background-color: #4a4a4a;
+}
+.product-img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+.product-img-wrap:hover .product-img {
+    opacity: 0.3;
+}
+.product-img-wrap:hover .product-btn {
+    display: block;
+}
+.product-header {
+    text-align: center;
+}
+.product-price {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.product-btn {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 36.5%;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
+/* .product-info {
+    font-style: italic;
+} */
+.product-btn:hover, .basket-btn:hover {
+    cursor: pointer;
+    background-color: #4a4a4a;
+    color: #f0f0f0;
+    border: 2px solid #f0f0f0;
+}
+.basket-btn:hover {
+    border: 2px solid #4a4a4a;
+}
+.product-btn:hover:active, .basket-btn:active {
+    transform: scale(1.2);
+}
+.basket {
+    margin: 2em auto;
+}
+.basket-content {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+.basket-items {
+    display: block;
+    padding: 1em .3em 1em .3em;;
+}
+.basket-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    /* margin: .3em .3em .3em .3em; */
+    margin: 0.01em;
+}
+.basket-item-name {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 0.2fr;
+}
+.basket-delimiter {
+    border-bottom: 1px solid #7e7d7d;
+}
+.basket-text {
+    text-align: center;
+    padding: 0.1em 0 0.1em 0;
+}
+.basket-text-italic {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 0.1em 0 0.1em 0;
+}
+.basket-header,
+.footer-item-basket,
+.basket-footer {
+    background-color: #d7d7d7;
+    font-weight: bold;
+    padding: 0.1em 0 0 0;
+}
+.basket-header span,
+.footer-item-basket span {
+    display: block;
+}
+.basket-header,
+.basket-footer {
+    margin-top: 0.2em;
+    color: #fff;
+    background-color: #6b6a6a;
+}
+
+
+
