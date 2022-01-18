@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="contact_form" class="contact_form" action="#">
+        <fieldset class="framing" form="contact_form">
+            <legend class="framing-title">Контактная информация</legend>
+            <ul>
+                <li>
+                    <h2>Пожалуйста, заполните форму регистрации пользователей.</h2>
+                    <span class="required_notification">Обязательные поля помечены *</span>
+                </li>
+                <li>
+                    <label for="username">Имя пользователя: <span class="required">*</span></label>
+                    <input type="text" id="username" name="name" required placeholder=" Одно слово" size="25"
+                        pattern="^[a-zA-Z]{3,15}$" autofocus>
+                    <span class="form_hint">Имя содержит только буквы латинского алфавита</span>
+                </li>
+                <li>
+                    <label for="tel">Номер телефона: <span class="required">*</span></label>
+                    <input type="tel" name="tel" pattern="^(\+7)(\(\d{3}\))(\d{3}-(\d{4}))$" required
+                        placeholder=" +7(000)000-0000">
+                    <span class="form_hint">Телефон имеет вид +7(000)000-0000</span>
+                </li>
+                <li>
+                    <label for="email">Ваш email: <span class="required">*</span></label>
+                    <input type="email" id="email" pattern="^([a-z]+\.?-?[a-z]+)@[a-z]+\.[rucom]{2,3}$"
+                        placeholder=" Укажите Ваш email" size="25" required>
+                    <span class="form_hint">E-mail имеет вид mymail@mail.ru, или my.mail@mail.ru, или
+                        my-mail@mail.ru</span>
+                </li>
+                <li>
+                    <label for="about">Расскажите о себе: <span class="required">*</span></label>
+                    <textarea id="about" pattern="[a-zA-zа-яА-ЯёЁ,._-\s]+" cols="40" rows="6" required></textarea>
+                    <span class="form_hint">Ваши интересы, достоинства, увлечения, достижения</span>
+                </li>
+                <li>
+                    <button class="submit" type="submit">Отправить данные формы</button>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
