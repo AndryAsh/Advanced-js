@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Интернет-магазин</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="app">
+            <header class="page-header">
+                <div class="logo">Интернет-магазин</div>
+                <div class="basket">
+                    <form action="#" class="search-form">
+                        <input type="text" class="search-field" v-model="searchLine">
+                        <button class="btn-search" type="submit" @click="FilterGoods(searchLine)">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <button class="basket-btn" type="button" @click="visibilityBasket(isVisibleCart)">Корзина</button>
+                </div>
+            </header>
+            <main class="content">
+                <section class="products content-container">
+                    <article class="product-item border-radius" v-for="product of products" :key="product.id_product"
+                        :data-id="product.id_product">
+                        <div class="product-img-wrap border-radius">
+                            <img :src="imgCatalog" alt="Фотография товара" class="product-img border-radius">
+                            <button class="product-btn" type="button" @click="addToBasket(product)">Добавить в
+                                корзину</button>
+                        </div>
+                        <h3 class="product-header">{{ product.product_name }}</h3>
+                        <span class="product-price">Цена: {{product.price}} руб.</span>
+                    </article>
+                </section>
+
+                <section class="basket content-container">
+                    <article class="basket-items basket-content"
+                        :class="{ visible: isVisibleCart, unvisible: !isVisibleCart }">
+                        <h4 class="basket-header basket-grid">
+                            <span class="basket-delimiter basket-text">--- Наименование ---</span>
+                            <span class="basket-delimiter basket-text">Цена</span>
+                            <span class="basket-delimiter basket-text">Кол-во</span>
+                            <span class="basket-delimiter basket-text">ИТОГО:</span>
+                        </h4>
+                        <div class="plug-basket" :class="{ block: !plug, none: plug }">
+                            <h4 class="plug-text">{{ plugBasket }}</h4>
+                        </div>
+                        <div class="basket-elements">
+                            <div class="item-basket basket-grid" v-for="product of Object.values(basket.contents)"
+                                :key="product.id_product" :data-id="product.id_product">
+                                <div class="basket-item-name basket-delimiter basket-text-italic" data-item="name">
+                                    <button class="btn-item-basket-inc" type="button" @click="addToBasket(product)"
+                                        :data-id="product.id_product"> + </button>
+                                    {{ product.product_name }}
+                                    <button class="btn-item-basket-dec" type="button" @click="delFromBasket(product)"
+                                        :data-id="product.id_product"> - </button>
+                                </div>
+                                <span class="basket-delimiter basket-text-italic" data-item="price">{{ product.price }}
+                                    руб.</span>
+                                <span class="basket-delimiter basket-text-italic" data-item="count">{{
+                                    product.quantity }}</span>
+                                <span class="basket-delimiter basket-text-italic" data-item="summa">{{ product.price *
+                                    product.quantity }} руб.</span>
+                            </div>
+                            <div class="basket-footer basket-grid">
+                                <span class="basket-delimiter basket-text">ОБЩИЙ ИТОГ:</span>
+                                <span class="basket-delimiter basket-text"></span>
+                                <span class="basket-delimiter basket-text" data-footer-basket="count">{{
+                                    basket.countGoods }}</span>
+                                <span class="basket-delimiter basket-text" data-footer-basket="summa">{{ basket.amount
+                                    }} руб.</span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+        </div>
+
+
+        <!-- <header>
+            <button class="basket-btn" type="button">Корзина</button>
+        </header>
+        <main class="content">
+            <section class="products content-container">
+
+            </section>
+            <section class="basket content-container">
+                <article class="basket-items basket-content">
+                    <h4 class="basket-header basket-grid">
+                        <span class="basket-delimiter basket-text">--- Наименование ---</span>
+                        <span class="basket-delimiter basket-text">Цена</span>
+                        <span class="basket-delimiter basket-text">Кол-во</span>
+                        <span class="basket-delimiter basket-text">ИТОГО:</span>
+                    </h4>
+                    <div class="basket-elements">
+
+                    </div>
+                    <div class="basket-footer basket-grid">
+                        <span class="basket-delimiter basket-text">ОБЩИЙ ИТОГ:</span>
+                        <span class="basket-delimiter basket-text"></span>
+                        <span class="basket-delimiter basket-text" data-footer-basket="count">0</span>
+                        <span class="basket-delimiter basket-text" data-footer-basket="summa">0 руб.</span>
+                    </div>
+                </article>
+            </section> -->
+        </main>
+        <footer class="footer">
+            <!-- <p class="copyright"></p> -->
+        </footer>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="./js/new_main.js"></script> -->
+</body>
+
+</html>
