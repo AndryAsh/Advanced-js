@@ -1,0 +1,217 @@
+.container {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+}
+.content-container {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+.border-radius {
+    border-radius: 0.3em;
+}
+.visible {
+    visibility: visible ;
+}
+.unvisible {
+    visibility: hidden;
+}
+.block {
+    display: block;
+}
+.none {
+    display: none;
+}
+.plug-text {
+    display: block;
+    text-align: center;
+}
+.basket-btn,
+.btn-error-srv {
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
+.page-header {
+    display: flex;
+    background-color: #6b6a6a;
+    justify-content: space-between;
+    color: #fafafa;
+    padding: 1em 1em;
+}
+.logo{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.basket {
+    position: relative;
+    /* margin: 2em auto; */
+}
+.basket-btn, .logo{
+    align-self: center;
+}
+.btn-search {
+    background-color: transparent;
+    border: none;
+    color: #fafafa;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+.btn-search:hover {
+    cursor: pointer;
+}
+.btn-search:active {
+
+}
+.search-form{
+    position: relative;
+    margin-right: 50px;
+    display: inline-block;
+}
+.search-field:focus{
+    outline: none;
+}
+.search-field {
+    box-sizing: border-box;
+    width: 200px;
+    color: #fafafa;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fafafa;
+}
+.content {
+    position: relative;
+    margin: 3em 0 3em 0;
+}
+.error-msg-srv {
+    /* display: none; */
+    position: absolute;
+    z-index: 9;
+    width: 30em;
+    height: 8em;
+    left: 50%;
+    top: 50%;
+    margin-left: -15em;
+    margin-top: -4em;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 0.3em;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.products {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+.product-item {
+    position: relative;
+    background-color: #f0f0f0;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    padding: 1em;
+}
+.product-img-wrap {
+    background-color: #4a4a4a;
+}
+.product-img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+.product-img-wrap:hover .product-img {
+    opacity: 0.3;
+}
+.product-img-wrap:hover .product-btn {
+    display: block;
+}
+.product-header {
+    text-align: center;
+}
+.product-price {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.product-btn {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 36.5%;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
+/* .product-info {
+    font-style: italic;
+} */
+.product-btn:hover, .basket-btn:hover {
+    cursor: pointer;
+    background-color: #4a4a4a;
+    color: #f0f0f0;
+    border: 2px solid #f0f0f0;
+}
+.basket-btn:hover {
+    border: 2px solid #4a4a4a;
+}
+.product-btn:hover:active, .basket-btn:active .btn-search:active {
+    transform: scale(1.2);
+}
+.basket-content {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+.basket-items {
+    display: block;
+    /* display: none; */
+    padding: 1em .3em 1em .3em;;
+}
+.basket-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    /* margin: .3em .3em .3em .3em; */
+    margin: 0.01em;
+}
+.basket-item-name {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 0.2fr;
+}
+.basket-delimiter {
+    border-bottom: 1px solid #7e7d7d;
+}
+.basket-text {
+    text-align: center;
+    padding: 0.1em 0 0.1em 0;
+}
+.basket-text-italic {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 0.1em 0 0.1em 0;
+}
+.basket-header,
+.footer-item-basket,
+.basket-footer {
+    background-color: #d7d7d7;
+    font-weight: bold;
+    padding: 0.1em 0 0 0;
+}
+.basket-header span,
+.footer-item-basket span {
+    display: block;
+}
+.basket-header,
+.basket-footer {
+    margin-top: 0.2em;
+    color: #fff;
+    background-color: #6b6a6a;
+}
+
+
+
