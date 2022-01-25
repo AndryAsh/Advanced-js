@@ -5,6 +5,7 @@ const app = new Vue({
     data: {
         catalogURL: '/catalogData.json',
         products: [],
+        filtered: [],
         imgCatalog: './img/no_image-1200x630.png',
         basket: {
             'amount': 0,
@@ -83,12 +84,8 @@ const app = new Vue({
             this.basket.countGoods = this.calcCountGoods();
         },
         FilterGoods(line) {
-            if (result = this.products.find(el => el.product_name === line)) {
-                console.log(result);
-            } else {
-                console.log('Товар не найден');
-            }
-            this.searchLine = '';
+            let regexp = new RegExp(line, 'i');
+            this.filtered = this.products.filter(el => regexp.test(el.product_name));
         },
         visibilityBasket(isVisibleCart) {
             this.isVisibleCart = !isVisibleCart;
@@ -117,6 +114,7 @@ const app = new Vue({
                 for (let el of data) {
                     this.products.push(el);
                 }
+                this.filtered = JSON.parse(JSON.stringify(this.products));
             });
         this.getJson(`${API + this.getBasketURL}`)
             .then(data => {
@@ -124,6 +122,7 @@ const app = new Vue({
                     this.basket.contents[el.id_product] = el;
                 }
                 this.basket.amount = data.amount;
+                /* this.$set(this.basket, 'countGoods', data.countGoods); */
                 this.basket.countGoods = data.countGoods;
                 this.plugVisible();
             });

@@ -27,7 +27,7 @@
             </header>
             <main class="content">
                 <section class="products content-container">
-                    <article class="product-item border-radius" v-for="product of products" :key="product.id_product"
+                    <article class="product-item border-radius" v-for="product of filtered" :key="product.id_product"
                         :data-id="product.id_product">
                         <div class="product-img-wrap border-radius">
                             <img :src="imgCatalog" alt="Фотография товара" class="product-img border-radius">
@@ -49,6 +49,7 @@
                             <span class="basket-delimiter basket-text">ИТОГО:</span>
                         </h4>
                         <div class="plug-basket" :class="{ block: !plug, none: plug }">
+                            <!-- <div class="plug-basket" :class="{ block: !countGoods, none: countGoods }"> -->
                             <h4 class="plug-text">{{ plugBasket }}</h4>
                         </div>
                         <div class="basket-elements">
