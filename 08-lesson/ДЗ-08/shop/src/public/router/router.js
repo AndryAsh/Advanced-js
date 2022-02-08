@@ -2,6 +2,7 @@ import products from '../js/ProductsComp.js'
 import product_page from '../js/ProductPage.js'
 import cart_page from '../js/CartPage.js'
 import home from '../js/HomePage.js'
+import VueRouter from '../js/vue-router.esm.browser.js'
 /* import page_header from '../js/HeaderPage.js' */
 
 const routes = [
