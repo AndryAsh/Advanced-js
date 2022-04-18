@@ -1,14 +1,15 @@
 const products = [
   { id: 1, title: 'Notebook', price: 1000, img: './img/notebook-1200x630.webp' },
   { id: 2, title: 'Mouse', price: 100, img: './img/mouse-1200x630.webp' },
-  { id: 3, title: 'Keyboard', price: 250, img: '' },
-  { id: 4, title: 'Gamepad', price: 150, img: '' },
+  { id: 3, title: 'Keyboard', price: 250, img: null },
+  { id: 4, title: 'Gamepad', price: 150, img: null },
 ];
 
 const renderProduct = (title, price, img = './img/no_image-1200x630.png') => {
   /* if (img === '') {
     img = './img/no_image-1200x630.png';
   } */
+  console.log(img);
   return `<article class="product-item border-radius">
             <div class="product-img-wrap border-radius">
               <img src=${img} alt="Фотография товвара" class="product-img border-radius">
@@ -34,4 +35,7 @@ renderCatalog(products);
 Решается либо с применением метода join(' '), либо перебором элементов со вставкой.
 insertAdjacentHTML работает быстрей чем innerHTML, кроме того, при большом количестве товаров размер массива будет огромный, что замедлит отрисовку страницы.
 Сейчас каждый элемент рендерится и вставляется на страницу отдельно.
+PS:
+Изменил значение по-умолчанию в параметрах функции renderProduct, но условие все равно необходимо, т.к. в функцию при вызове передается значение ключа img и, если значение пустое - ничего не выводится.
+Условие оптимизировал через тернарный оператор.
 */
